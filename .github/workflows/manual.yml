@@ -43,10 +43,5 @@ jobs:
       - name: Build and push udagram-reverseproxy
         run: |
           cd udagram-reverseproxy
-<<<<<<< Updated upstream
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/reverseproxy:v3 .
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/reverseproxy:v3
-=======
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/reverseproxy:v4 .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/reverseproxy:v4
->>>>>>> Stashed changes
