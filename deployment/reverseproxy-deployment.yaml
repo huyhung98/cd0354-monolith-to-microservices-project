@@ -16,7 +16,7 @@ spec:
       name: backend-user
     spec:
       containers:
-      - image: huyohung/reverseproxy:v3
+      - image: huyohung/reverseproxy:v4
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
