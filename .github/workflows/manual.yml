@@ -25,23 +25,23 @@ jobs:
       - name: Build and push udagram-api-feed
         run: |
           cd udagram-api-feed
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-feed:latest .
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-feed:latest
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-feed:v3 .
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-feed:v3
 
       - name: Build and push udagram-api-user
         run: |
           cd udagram-api-user
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-user:latest .
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-user:latest
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-user:v3 .
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-user:v3
 
       - name: Build and push udagram-frontend
         run: |
           cd udagram-frontend
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-frontend:latest .
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-frontend:latest
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-frontend:v3 .
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-frontend:v3
 
       - name: Build and push udagram-reverseproxy
         run: |
           cd udagram-reverseproxy
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-reverseproxy:latest .
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-reverseproxy:latest
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-reverseproxy:v3 .
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-reverseproxy:v3
