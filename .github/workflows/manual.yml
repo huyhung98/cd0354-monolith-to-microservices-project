@@ -30,18 +30,18 @@ jobs:
 
       - name: Build and push udagram-api-user
         run: |
-          cd ../udagram-api-user
+          cd udagram-api-user
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-user:latest .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-api-user:latest
 
       - name: Build and push udagram-frontend
         run: |
-          cd ../udagram-frontend
+          cd udagram-frontend
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-frontend:latest .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-frontend:latest
 
       - name: Build and push udagram-reverseproxy
         run: |
-          cd ../udagram-reverseproxy
+          cd reverseproxy
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-reverseproxy:latest .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/udagram-reverseproxy:latest
